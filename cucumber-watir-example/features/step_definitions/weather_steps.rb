@@ -1,9 +1,13 @@
 require 'spec/expectations'
-require 'rubygems'
-require 'safariwatir'
+require 'watir'
+
+# Commenting out the Safari pieces of this example, since my demo will be running on a Windows machine.
+# require 'safariwatir'
+# require 'rubygems'
 
 Given /^I am on the weather\.com homepage$/ do
-  @browser = Watir::Safari.new()
+  # @browser = Watir::Safari.new
+  @browser = Watir::Browser.new
   @browser.goto('http://www.weather.com')
 end
 
