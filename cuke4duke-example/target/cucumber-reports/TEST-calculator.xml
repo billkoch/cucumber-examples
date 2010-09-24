@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite errors="0" failures="0" name="Adding numbers with a Calculator" tests="3" time="0.137000">
+<testcase classname="Adding numbers with a Calculator.Add two positive numbers" name="Add two positive numbers" time="0.070000">
+</testcase>
+<testcase classname="Adding numbers with a Calculator.Add a positive and negative number" name="Add a positive and negative number" time="0.022000">
+</testcase>
+<testcase classname="Adding numbers with a Calculator.Add two negative numbers" name="Add two negative numbers" time="0.045000">
+</testcase>
+</testsuite>

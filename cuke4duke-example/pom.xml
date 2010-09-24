@@ -28,6 +28,11 @@
 				<version>${cucumber.version}</version>
 				<configuration>
 					<jvmArgs>
+						<!--
+							By default, cuke4duke uses PicoContainer for wiring beans
+							together for the Java Step definitions. Since most applications
+							already use Spring, I'm telling cuke4duke to use Spring instead.
+						-->
 						<jvmArg>-Dcuke4duke.objectFactory=cuke4duke.internal.jvmclass.SpringFactory</jvmArg>
 						<jvmArg>-Dfile.encoding=${file.encoding}</jvmArg>
 					</jvmArgs>
@@ -60,22 +65,24 @@
 			</plugin>
 		</plugins>
 	</build>
-	<modules>
-	</modules>
-	<dependencyManagement>
-		<dependencies>
-			<dependency>
-				<groupId>cuke4duke</groupId>
-				<artifactId>cuke4duke</artifactId>
-				<version>${cucumber.version}</version>
-				<scope>test</scope>
-			</dependency>
-			<dependency>
-				<groupId>junit</groupId>
-				<artifactId>junit</artifactId>
-				<version>4.8.1</version>
-				<scope>test</scope>
-			</dependency>
-		</dependencies>
-	</dependencyManagement>
+	<dependencies>
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-context</artifactId>
+			<version>2.5.6</version>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>cuke4duke</groupId>
+			<artifactId>cuke4duke</artifactId>
+			<version>${cucumber.version}</version>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<version>4.8.1</version>
+			<scope>test</scope>
+		</dependency>
+	</dependencies>
 </project>
