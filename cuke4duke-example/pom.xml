@@ -47,6 +47,16 @@
 						<cucumberArg>--require</cucumberArg>
 						<cucumberArg>${basedir}/target/test-classes</cucumberArg>
 					</cucumberArgs>
+					<!--
+						cuke4duke requires JRuby to be pre-installed. You can grab a copy from here: 
+						
+						http://jruby.org/download mvn -Dcucumber.installGems=true
+						
+						You also need to install the cuke4duke gem, which you can do through Maven by
+						running the following goal:
+						
+						cuke4duke:cucumber
+					-->
 					<gems>
 						<gem>install cuke4duke --version ${cucumber.version}</gem>
 					</gems>
