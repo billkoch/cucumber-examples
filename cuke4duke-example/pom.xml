@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>com.karbonsoftware.examples.cucumber</groupId>
 	<artifactId>cuke4duke-example</artifactId>
@@ -29,9 +28,8 @@
 				<configuration>
 					<jvmArgs>
 						<!--
-							By default, cuke4duke uses PicoContainer for wiring beans
-							together for the Java Step definitions. Since most applications
-							already use Spring, I'm telling cuke4duke to use Spring instead.
+							By default, cuke4duke uses PicoContainer for wiring beans together for the Java Step definitions. Since most applications already use Spring,
+							I'm telling cuke4duke to use Spring instead.
 						-->
 						<jvmArg>-Dcuke4duke.objectFactory=cuke4duke.internal.jvmclass.SpringFactory</jvmArg>
 						<jvmArg>-Dfile.encoding=${file.encoding}</jvmArg>
@@ -85,4 +83,14 @@
 			<scope>test</scope>
 		</dependency>
 	</dependencies>
+	<!--
+		I realize it's terrible + horrible practice to include repository definitions in a pom file, but hey...if the artifacts aren't in repo1, what's a
+		developer to do?
+	-->
+	<repositories>
+		<repository>
+			<id>cukes</id>
+			<url>http://cukes.info/maven</url>
+		</repository>
+	</repositories>
 </project>

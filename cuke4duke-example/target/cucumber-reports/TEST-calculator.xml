@@ -1,9 +1,83 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite errors="0" failures="0" name="Adding numbers with a Calculator" tests="3" time="0.137000">
-<testcase classname="Adding numbers with a Calculator.Add two positive numbers" name="Add two positive numbers" time="0.070000">
+<testsuite errors="0" failures="1" name="Adding numbers with a Calculator" tests="3" time="0.161000">
+<testcase classname="Adding numbers with a Calculator.Add two positive numbers" name="Add two positive numbers" time="0.080000">
 </testcase>
-<testcase classname="Adding numbers with a Calculator.Add a positive and negative number" name="Add a positive and negative number" time="0.022000">
+<testcase classname="Adding numbers with a Calculator.Add a positive and negative number" name="Add a positive and negative number" time="0.024000">
 </testcase>
-<testcase classname="Adding numbers with a Calculator.Add two negative numbers" name="Add two negative numbers" time="0.045000">
+<testcase classname="Adding numbers with a Calculator.Add two negative numbers" name="Add two negative numbers" time="0.057000">
+  <failure message="failed Add two negative numbers" type="failed">
+Scenario: Add two negative numbers
+
+Given I have a Calculator
+When I add -1 and -1
+Then the sum should be 2
+
+Message:
+java.lang.AssertionError: The expected sum does not equal the actual sum expected:&lt;2&gt; but was:&lt;-2&gt; (NativeException)
+org/junit/Assert.java:91:in `fail'
+org/junit/Assert.java:645:in `failNotEquals'
+org/junit/Assert.java:126:in `assertEquals'
+org/junit/Assert.java:470:in `assertEquals'
+com/karbonsoftware/examples/cucumber/CalculatorSteps.java:30:in `thenTheSumShouldBe'
+sun/reflect/NativeMethodAccessorImpl.java:-2:in `invoke0'
+sun/reflect/NativeMethodAccessorImpl.java:39:in `invoke'
+sun/reflect/DelegatingMethodAccessorImpl.java:25:in `invoke'
+java/lang/reflect/Method.java:597:in `invoke'
+cuke4duke/internal/java/MethodInvoker.java:21:in `invoke'
+cuke4duke/internal/jvmclass/ClassLanguage.java:120:in `invoke'
+cuke4duke/internal/java/JavaStepDefinition.java:44:in `invokeWithArgs'
+cuke4duke/internal/language/AbstractStepDefinition.java:18:in `invoke'
+/Users/Bill/.m2/repository/.jruby/gems/cucumber-0.8.5/lib/cucumber/step_match.rb:26:in `invoke'
+/Users/Bill/.m2/repository/.jruby/gems/cucumber-0.8.5/lib/cucumber/ast/step_invocation.rb:62:in `invoke'
+/Users/Bill/.m2/repository/.jruby/gems/cucumber-0.8.5/lib/cucumber/ast/step_invocation.rb:41:in `accept'
+/Users/Bill/.m2/repository/.jruby/gems/cucumber-0.8.5/lib/cucumber/ast/tree_walker.rb:99:in `visit_step'
+/Users/Bill/.m2/repository/.jruby/gems/cucumber-0.8.5/lib/cucumber/ast/tree_walker.rb:164:in `broadcast'
+/Users/Bill/.m2/repository/.jruby/gems/cucumber-0.8.5/lib/cucumber/ast/tree_walker.rb:98:in `visit_step'
+/Users/Bill/.m2/repository/.jruby/gems/cucumber-0.8.5/lib/cucumber/ast/step_collection.rb:15:in `accept'
+/Users/Bill/.m2/repository/.jruby/gems/cucumber-0.8.5/lib/cucumber/ast/step_collection.rb:14:in `each'
+/Users/Bill/.m2/repository/.jruby/gems/cucumber-0.8.5/lib/cucumber/ast/step_collection.rb:14:in `accept'
+/Users/Bill/.m2/repository/.jruby/gems/cucumber-0.8.5/lib/cucumber/ast/tree_walker.rb:93:in `visit_steps'
+/Users/Bill/.m2/repository/.jruby/gems/cucumber-0.8.5/lib/cucumber/ast/tree_walker.rb:164:in `broadcast'
+/Users/Bill/.m2/repository/.jruby/gems/cucumber-0.8.5/lib/cucumber/ast/tree_walker.rb:92:in `visit_steps'
+/Users/Bill/.m2/repository/.jruby/gems/cucumber-0.8.5/lib/cucumber/ast/scenario.rb:53:in `accept'
+/Users/Bill/.m2/repository/.jruby/gems/cucumber-0.8.5/lib/cucumber/step_mother.rb:327:in `with_hooks'
+/Users/Bill/.m2/repository/.jruby/gems/cucumber-0.8.5/lib/cucumber/step_mother.rb:348:in `before_and_after'
+/Users/Bill/.m2/repository/.jruby/gems/cucumber-0.8.5/lib/cucumber/step_mother.rb:326:in `with_hooks'
+/Users/Bill/.m2/repository/.jruby/gems/cucumber-0.8.5/lib/cucumber/step_mother.rb:337:in `call'
+/Users/Bill/.m2/repository/.jruby/gems/cucumber-0.8.5/lib/cucumber/step_mother.rb:337:in `around'
+/Users/Bill/.m2/repository/.jruby/gems/cucumber-0.8.5/lib/cucumber/language_support/language_methods.rb:13:in `around'
+/Users/Bill/.m2/repository/.jruby/gems/cucumber-0.8.5/lib/cucumber/language_support/language_methods.rb:95:in `call'
+/Users/Bill/.m2/repository/.jruby/gems/cucumber-0.8.5/lib/cucumber/language_support/language_methods.rb:95:in `execute_around'
+/Users/Bill/.m2/repository/.jruby/gems/cucumber-0.8.5/lib/cucumber/language_support/language_methods.rb:12:in `around'
+/Users/Bill/.m2/repository/.jruby/gems/cucumber-0.8.5/lib/cucumber/step_mother.rb:336:in `around'
+/Users/Bill/.m2/repository/.jruby/gems/cucumber-0.8.5/lib/cucumber/step_mother.rb:334:in `call'
+/Users/Bill/.m2/repository/.jruby/gems/cucumber-0.8.5/lib/cucumber/step_mother.rb:334:in `around'
+/Users/Bill/.m2/repository/.jruby/gems/cucumber-0.8.5/lib/cucumber/step_mother.rb:325:in `with_hooks'
+/Users/Bill/.m2/repository/.jruby/gems/cucumber-0.8.5/lib/cucumber/ast/scenario.rb:51:in `accept'
+/Users/Bill/.m2/repository/.jruby/gems/cucumber-0.8.5/lib/cucumber/ast/scenario.rb:106:in `with_visitor'
+/Users/Bill/.m2/repository/.jruby/gems/cucumber-0.8.5/lib/cucumber/ast/scenario.rb:45:in `accept'
+/Users/Bill/.m2/repository/.jruby/gems/cucumber-0.8.5/lib/cucumber/ast/tree_walker.rb:51:in `visit_feature_element'
+/Users/Bill/.m2/repository/.jruby/gems/cucumber-0.8.5/lib/cucumber/ast/tree_walker.rb:164:in `broadcast'
+/Users/Bill/.m2/repository/.jruby/gems/cucumber-0.8.5/lib/cucumber/ast/tree_walker.rb:50:in `visit_feature_element'
+/Users/Bill/.m2/repository/.jruby/gems/cucumber-0.8.5/lib/cucumber/ast/feature.rb:35:in `accept'
+/Users/Bill/.m2/repository/.jruby/gems/cucumber-0.8.5/lib/cucumber/ast/feature.rb:34:in `each'
+/Users/Bill/.m2/repository/.jruby/gems/cucumber-0.8.5/lib/cucumber/ast/feature.rb:34:in `accept'
+/Users/Bill/.m2/repository/.jruby/gems/cucumber-0.8.5/lib/cucumber/ast/tree_walker.rb:20:in `visit_feature'
+/Users/Bill/.m2/repository/.jruby/gems/cucumber-0.8.5/lib/cucumber/ast/tree_walker.rb:164:in `broadcast'
+/Users/Bill/.m2/repository/.jruby/gems/cucumber-0.8.5/lib/cucumber/ast/tree_walker.rb:19:in `visit_feature'
+/Users/Bill/.m2/repository/.jruby/gems/cucumber-0.8.5/lib/cucumber/ast/features.rb:29:in `accept'
+/Users/Bill/.m2/repository/.jruby/gems/cucumber-0.8.5/lib/cucumber/ast/features.rb:17:in `each'
+/Users/Bill/.m2/repository/.jruby/gems/cucumber-0.8.5/lib/cucumber/ast/features.rb:17:in `each'
+/Users/Bill/.m2/repository/.jruby/gems/cucumber-0.8.5/lib/cucumber/ast/features.rb:28:in `accept'
+/Users/Bill/.m2/repository/.jruby/gems/cucumber-0.8.5/lib/cucumber/ast/tree_walker.rb:14:in `visit_features'
+/Users/Bill/.m2/repository/.jruby/gems/cucumber-0.8.5/lib/cucumber/ast/tree_walker.rb:164:in `broadcast'
+/Users/Bill/.m2/repository/.jruby/gems/cucumber-0.8.5/lib/cucumber/ast/tree_walker.rb:13:in `visit_features'
+/Users/Bill/.m2/repository/.jruby/gems/cucumber-0.8.5/lib/cucumber/cli/main.rb:61:in `execute!'
+/Users/Bill/.m2/repository/.jruby/gems/cucumber-0.8.5/lib/cucumber/cli/main.rb:25:in `execute'
+/Users/Bill/.m2/repository/.jruby/gems/cucumber-0.8.5/bin/cucumber:8
+/Users/Bill/.m2/repository/.jruby/gems/cucumber-0.8.5/bin/cucumber:13:in `load'
+/Users/Bill/.m2/repository/.jruby/gems/cuke4duke-0.3.2-java/bin/cuke4duke:13
+/Users/Bill/.m2/repository/.jruby/gems/cuke4duke-0.3.2-java/bin/cuke4duke:19:in `load'
+/Users/Bill/.m2/repository/.jruby/bin/cuke4duke:19  </failure>
 </testcase>
 </testsuite>
